@@ -1,0 +1,25 @@
+import example.*
+
+const ricardo = new Oficinista (estrellas = 0, salud = 10, habilidades = ["escritura","lectura"])
+
+const bond = new Espia (salud = 50, habilidades = ["escape","sigilo"])
+
+const boss = new Jefe (salud = 100, habilidades = ["comerSerpientes"], subordinados = [ricardo,bond])
+
+test "un oficinista esta incapacitado" {
+
+	assert.that(ricardo.estadoIncapacitado())
+
+}
+
+test "un espia esta incapacitado" {
+	
+	assert.that(bond.estadoIncapacitado())
+	
+}
+
+test "Puede usar habilidad" {
+	
+	assert.that(boss.puedeUsarHabilidad("escape"))
+	
+}
